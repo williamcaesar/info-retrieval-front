@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.conf.urls import include
+from django.conf.urls import url
+from django.contrib import admin
 
-# Create your views here.
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'', include('site.urls')),
+]

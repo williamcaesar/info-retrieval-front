@@ -54,9 +54,7 @@ def get_content(file_path):
 class Document(models.Model):
     title = models.CharField(max_length=100)
     file = models.FileField(upload_to='DOCS/')
-    content = 'bubu'
 
     def publish(self):
         self.published_date = timezone.now()
-        #self.title = 'lololololo'
         self.save()
